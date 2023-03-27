@@ -1,6 +1,7 @@
 import abi from "./Contract/coffee.json";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
+// const ethers = require("ethers");
 import "./App.css";
 import Buy from "./Components/Buy";
 import Memos from "./Components/Memos";

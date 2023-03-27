@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// const ethers = require("ethers");
 import { ethers } from "ethers";
 
 function Buy({ state, account }) {
