@@ -49,7 +49,7 @@ function Buy({ state, account }) {
           />
           <button
             type="submit"
-            className="border-2 border-slate-300 p-2 w-[10em] mt-9 rounded-md text-lg hover:w-[15em] ease-in-out duration-150 md:p-4 md:w-[70%] md:hover:w-[90%] mx-auto"
+            className="border-2 border-slate-300 p-2 w-[10em] mt-9 rounded-full text-lg hover:w-[15em] ease-in-out duration-150 md:p-4 md:w-[70%] md:hover:w-[90%] mx-auto"
             onClick={buy}
             disabled={!contract}
           >

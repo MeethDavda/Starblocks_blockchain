@@ -14,6 +14,7 @@ function App() {
     contract: null,
   });
   const [account, setAccount] = useState();
+
   //use this template everytime
   useEffect(() => {
     const connectWallet = async () => {
@@ -22,10 +23,6 @@ function App() {
       try {
         const { ethereum } = window;
         if (ethereum) {
-          const account = await ethereum.request({
-            method: "eth_requestAccounts",
-          });
-
           window.ethereum.on("chainChanged", () => {
             window.location.reload();
           });
@@ -41,7 +38,7 @@ function App() {
             contractABI,
             signer
           );
-          setAccount(account);
+          // setAccount(account);
           setState({ provider, signer, contract });
         } else {
           alert("Please install metamask !");
@@ -56,7 +53,7 @@ function App() {
 
   return (
     <div className=" text-slate-200 ">
-      <Navbar />
+      <Navbar state={state} account={account} setAccount={setAccount} />
       <Main />
       <Buy state={state} account={account} />
       <Memos state={state} />
