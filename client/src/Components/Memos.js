@@ -13,23 +13,32 @@ function Memos({ state }) {
   }, [contract]);
 
   return (
-    <div className="bg-[#2f453e] rounded-lg p-4 drop-shadow-xl mt-10 mb-20 md:text-3xl m-3">
-      {memos.map((memo) => {
-        return (
-          <table key={memo.timestamp} className="my-5 ">
+    <div className="bg-slate-30  overflow-auto mx-4 my-10 ">
+      <table
+        key={Math.random()}
+        class="table-fixed mx-auto max-w-[1024px] border-separate border-spacing-3 border-2 rounded-lg border-[#3e554e]"
+      >
+        <thead>
+          <tr className="bg-[#3e554e]">
+            <th className="rounded-lg p-1 md:p-2">Name</th>
+            <th className="rounded-lg p-1 md:p-2">Message</th>
+            <th className="rounded-lg p-1 md:p-2">Time stamp</th>
+            <th className="rounded-lg p-1 md:p-2">From</th>
+          </tr>
+        </thead>
+        {memos.map((memo) => {
+          return (
             <tbody>
-              <tr className="">
-                <td className="px-3">{memo.name}</td>
-                <td className="px-3">{memo.message}</td>
-                <td className="px-3">
-                  {new Date(memo.timestamp * 1000).toLocaleString()}
-                </td>
-                <td className="px-3">{memo.from}</td>
+              <tr className="text-sm  ">
+                <td>{memo.name}</td>
+                <td>{memo.message}</td>
+                <td>{new Date(memo.timestamp * 1000).toLocaleString()}</td>
+                <td>{memo.from}</td>
               </tr>
             </tbody>
-          </table>
-        );
-      })}
+          );
+        })}
+      </table>
     </div>
   );
 }

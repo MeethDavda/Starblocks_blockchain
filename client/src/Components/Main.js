@@ -3,28 +3,16 @@ import coffee from "../assets/table_coffee.jpg";
 
 function Main({ account }) {
   return (
-    <div className="flex w-full">
-      <div className="flex flex-col mx-auto mt-10 md:ml-20 md:mt-10 ">
-        <div className="flex justify-center md:justify-start md:p-5  flex-row">
-          <img
-            src="https://www.freepnglogos.com/uploads/skeleton-starbucks-logo-png-29.png"
-            className="object-contain h-[10em] "
-            alt="Skeleton Starbucks Logo Png"
-          />
+    <div className="w-full px-4 py-10 bg-slate-40">
+      <div className="max-w-[1400px] mx-auto grid md:grid-cols-2">
+        <div className="font-bold text-5xl md:text-6xl lg:text-7xl mx-auto my-10 drop-shadow-lg bg-slate-30 lg:pt-32 md:pt-16 tracking-wider">
+          STARBLOCKS
         </div>
-
-        <div className="w-full mx-auto grid md:grid-cols-2 p-5 md:gap-[15em]">
-          <div className="font-bold text-[6rem] lg:text-[10rem] p-5 my-10 lg:ml-10 drop-shadow-2xl md:pt-[2em] tracking-wider">
-            STARBLOCKS
-          </div>
-          <div className="flex justify-center content-center mt-20 ">
-            <img
-              src={coffee}
-              alt="/"
-              className="object-contain w-[30em] md:w-[40em] rounded-full drop-shadow-2xl"
-            />
-          </div>
-        </div>
+        <img
+          src={coffee}
+          alt="/"
+          className="object-contain rounded-full drop-shadow-2xl h-[30em] lg:h-[40em] mx-auto mt-10"
+        />
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import "./App.css";
 import Buy from "./Components/Buy";
 import Memos from "./Components/Memos";
 import Main from "./Components/Main";
+import Navbar from "./Components/Navbar";
 
 function App() {
   const [state, setState] = useState({
@@ -54,12 +55,11 @@ function App() {
   console.log(state);
 
   return (
-    <div className="bg- text-slate-200 w-full h-full">
-      <div className="flex flex-col items-center">
-        <Main />
-        <Buy state={state} account={account} />
-        <Memos state={state} />
-      </div>
+    <div className=" text-slate-200 ">
+      <Navbar />
+      <Main />
+      <Buy state={state} account={account} />
+      <Memos state={state} />
     </div>
   );
 }
