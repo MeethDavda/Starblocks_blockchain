@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+// const ethers = require("ethers");
 import { ethers } from "ethers";
 
 function Memos({ state }) {
